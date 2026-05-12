@@ -1,0 +1,51 @@
+<template>
+    <lightning-card title="Simple Calculator" icon-name="utility:calculator">
+        <div class="slds-p-around_medium">
+
+            <lightning-input 
+                type="number" 
+                label="First Number" 
+                value={firstNumber} 
+                variant="label-inline"
+                onchange={handleFirstNumberChange}>
+            </lightning-input>
+
+            <lightning-input 
+                type="number" 
+                label="Second Number" 
+                value={secondNumber} 
+                variant="label-inline"
+                onchange={handleSecondNumberChange}>
+            </lightning-input>
+
+            <lightning-button 
+                label="Add" 
+                onclick={addNumbers} 
+                class="slds-m-top_small">
+            </lightning-button>
+
+            <lightning-button 
+                label="Subtract" 
+                onclick={subtractNumbers} 
+                class="slds-m-top_small slds-m-left_small">
+            </lightning-button>
+
+            <lightning-button 
+                label="Multiply" 
+                onclick={multiplyNumbers} 
+                class="slds-m-top_small slds-m-left_small">
+            </lightning-button>
+
+            <lightning-button 
+                label="Divide" 
+                onclick={divideNumbers} 
+                class="slds-m-top_small slds-m-left_small">
+            </lightning-button>
+
+            <div class="slds-m-top_small">
+                <strong>Result:</strong> {result}
+            </div>
+
+        </div>
+    </lightning-card>
+</template>
